@@ -10,9 +10,8 @@ const withTM = require('next-transpile-modules')(modules, {
   resolveSymlinks: true,
 });
 
-const { NODE_ENV, debug } = process.env;
+const { NODE_ENV } = process.env;
 
-const isDebugMode = !!debug;
 const isProduction = NODE_ENV === 'production';
 const trailingSlash = isProduction;
 
@@ -28,7 +27,6 @@ const sassOptions = {
 
 const env = {
   isProduction,
-  isDebugMode,
 };
 
 console.log(chalk.bgRed.underline(`NODE_ENV:${NODE_ENV}`));
@@ -40,9 +38,6 @@ const nextConfig = {
   cssModules: true,
   sassOptions,
   cssLoaderOptions,
-  images: {
-    disableStaticImages: true,
-  },
   webpack: (config) => {
     config.plugins = config.plugins || [];
 
