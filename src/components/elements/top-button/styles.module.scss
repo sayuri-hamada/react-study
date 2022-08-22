@@ -1,0 +1,19 @@
+@use 'abstracts/index' as *;
+
+.container {
+  align-items: center;
+  background-color: #000;
+  border-radius: 20px;
+  bottom: 40px;
+  color: #fff;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  width: 200px;
+}
