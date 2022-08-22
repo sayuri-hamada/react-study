@@ -1,0 +1,44 @@
+@use 'abstracts/index' as *;
+
+.container {
+  position: relative;
+}
+
+.main {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  width: 640px;
+
+  > .buttonList + button {
+    margin-top: 24px;
+  }
+}
+
+.image {
+  width: 640px;
+}
+
+.buttonList {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.button {
+  border: 1px solid #404040;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 20px;
+  text-align: center;
+
+  &[data-is-active='true'] {
+    background-color: red;
+    border-color: red;
+    color: #fff;
+  }
+}
