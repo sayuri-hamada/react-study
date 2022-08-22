@@ -9,6 +9,7 @@ import {
 
 import { IMAGE_PATH } from '../../../../../config';
 import { TopButton } from '../../../../elements';
+import { Container } from '../../../../layouts/container';
 
 import styles from './styles.module.scss';
 
@@ -94,33 +95,35 @@ const CountUp: FC = () => {
   }, []);
 
   return (
-    <section className={styles.container}>
-      <TopButton />
-      <h1>カウントアップ</h1>
-      <div className={styles.main}>
-        <div className={styles.image}>
-          <img src={`${IMAGE_PATH}img_${currentImageIndex + 1}.jpg`} alt="" />
+    <Container>
+      <section className={styles.container}>
+        <TopButton />
+        <h1>カウントアップ</h1>
+        <div className={styles.main}>
+          <div className={styles.image}>
+            <img src={`${IMAGE_PATH}img_${currentImageIndex + 1}.jpg`} alt="" />
+          </div>
+          <ul className={styles.buttonList}>
+            <button className={styles.button} onClick={onClickPrev}>
+              PREV
+            </button>
+            <p>
+              {currentImageIndex + 1}/{IMAGE_NUM}
+            </p>
+            <button className={styles.button} onClick={onClickNext}>
+              NEXT
+            </button>
+          </ul>
+          <button
+            className={styles.button}
+            onClick={onClickUpdate}
+            data-is-active={isUpdate}
+          >
+            自動更新
+          </button>
         </div>
-        <ul className={styles.buttonList}>
-          <button className={styles.button} onClick={onClickPrev}>
-            PREV
-          </button>
-          <p>
-            {currentImageIndex + 1}/{IMAGE_NUM}
-          </p>
-          <button className={styles.button} onClick={onClickNext}>
-            NEXT
-          </button>
-        </ul>
-        <button
-          className={styles.button}
-          onClick={onClickUpdate}
-          data-is-active={isUpdate}
-        >
-          自動更新
-        </button>
-      </div>
-    </section>
+      </section>
+    </Container>
   );
 };
 
