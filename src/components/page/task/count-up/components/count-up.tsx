@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { FC } from 'react';
 
-import { IMAGE_PATH } from '../../../../config';
+import { IMAGE_PATH } from '../../../../../config';
 
 import styles from './styles.module.scss';
 
@@ -13,7 +13,9 @@ const CountUp: FC = () => {
 
   return (
     <section className={styles.container}>
-      <Link href="/">TOP</Link>
+      <Link href="/Users/kentaro/Desktop/_works/_ZIZO/develop/react-study/src/pages">
+        TOP
+      </Link>
       <h1>カウントアップ</h1>
       <div className={styles.main}>
         <div className={styles.image}>
