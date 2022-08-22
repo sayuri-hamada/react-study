@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import {
   FC,
   MutableRefObject,
@@ -9,6 +8,7 @@ import {
 } from 'react';
 
 import { IMAGE_PATH } from '../../../../../config';
+import { TopButton } from '../../../../elements';
 
 import styles from './styles.module.scss';
 
@@ -95,9 +95,7 @@ const CountUp: FC = () => {
 
   return (
     <section className={styles.container}>
-      <Link href="/Users/kentaro/Desktop/_works/_ZIZO/develop/react-study/src/pages">
-        TOP
-      </Link>
+      <TopButton />
       <h1>カウントアップ</h1>
       <div className={styles.main}>
         <div className={styles.image}>

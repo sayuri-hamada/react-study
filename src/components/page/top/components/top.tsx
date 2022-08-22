@@ -15,7 +15,7 @@ const Top: FC = () => {
         <h2>課題</h2>
         <ul>
           <li>
-            <Link href={`/${TASK_PATH}/count-up`}>カウントアップ</Link>
+            <Link href={`${TASK_PATH}count-up`}>カウントアップ</Link>
           </li>
         </ul>
       </section>
