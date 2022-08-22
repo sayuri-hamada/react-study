@@ -1,0 +1,15 @@
+import { VFC } from 'react';
+
+import styles from './styles.module.scss';
+
+type TProps = {};
+
+const {{name_pc}}: VFC<TProps> = (props: TProps) => {
+  return (
+    <div className={styles.container}>
+      <p>components</p>
+    </div>
+  );
+};
+
+export { {{name_pc}} };

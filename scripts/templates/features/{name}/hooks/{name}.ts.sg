@@ -1,0 +1,13 @@
+import { useCallback, useEffect, useState } from 'react';
+
+export type T{{name_pc}} = {};
+
+const use{{name_pc}} = (): T{{name_pc}} => {
+  const [isHoge, updateHoge] = useState(false);
+
+  useEffect(() => {}, []);
+
+  return {};
+};
+
+export { use{{name_pc}} };
