@@ -1,14 +1,11 @@
 module.exports = {
   root: true,
   extends: [
-    'airbnb-base',
-    'airbnb-typescript',
     'plugin:@typescript-eslint/recommended',
     'next/core-web-vitals',
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:react/recommended',
-    'plugin:jsx-a11y/recommended',
     // TODO: エラーが出るので一旦無効に変更
     // 'plugin:react-hooks/recommended',
     'plugin:@next/next/recommended',
@@ -21,7 +18,6 @@ module.exports = {
     'prettier',
     'react',
     'import',
-    'jsx-a11y',
     'unused-imports',
   ],
   env: {
@@ -124,9 +120,6 @@ module.exports = {
     // Next ----------------------------------
     // SSGがnext/imageに対応していないため
     '@next/next/no-img-element': 'off',
-
-    // jsx-a11y ----------------------------------
-    'jsx-a11y/anchor-is-valid': 'off',
 
     // plugin ----------------------------------
     // 不要なimportを削除
