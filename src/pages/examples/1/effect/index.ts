@@ -1,3 +1,3 @@
-import { PropsPage } from '../../../../components/page/examples/1/props';
+import { EffectPage } from '../../../../components/page/examples/1/effect';
 
-export default PropsPage;
+export default EffectPage;

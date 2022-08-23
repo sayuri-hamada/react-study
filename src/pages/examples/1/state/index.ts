@@ -1,3 +1,3 @@
-import { PropsPage } from '../../../../components/page/examples/1/props';
+import { StatePage } from '../../../../components/page/examples/1/state';
 
-export default PropsPage;
+export default StatePage;
