@@ -16,6 +16,15 @@ const Top: FC = () => {
             <li>
               <Link href={`${EXAMPLES_PATH}1/props`}>props</Link>
             </li>
+            <li>
+              <Link href={`${EXAMPLES_PATH}1/state`}>useState</Link>
+            </li>
+            <li>
+              <Link href={`${EXAMPLES_PATH}1/ref`}>useRef</Link>
+            </li>
+            <li>
+              <Link href={`${EXAMPLES_PATH}1/effect`}>useEffect</Link>
+            </li>
           </ul>
         </section>
         <section className={styles.block}>
