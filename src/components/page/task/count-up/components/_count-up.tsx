@@ -1,11 +1,4 @@
-import {
-  FC,
-  MutableRefObject,
-  useCallback,
-  useEffect,
-  useRef,
-  useState,
-} from 'react';
+import { FC, MutableRefObject, useEffect, useRef, useState } from 'react';
 
 import { IMAGE_PATH } from '../../../../../config';
 import { Container } from '../../../../layouts/container';
@@ -41,50 +34,45 @@ const CountUp: FC = () => {
     timerRef.current = window.setTimeout(onUpdate, IMAGE_TIMER);
   };
 
+  /**
+   * タイマーをクリア
+   */
   const clearTimer = (): void => {
     window.clearTimeout(timerRef.current);
     updateTimer(false);
   };
 
-  // useCallback ---------------------------
   /**
    * Nextボタンが押されたとき
-   * @type {() => void}
    */
-  const onClickNext = useCallback((): void => {
+  const onClickNext = (): void => {
     clearTimer();
 
     const index: number = currentImageIndex + 1;
     updateCurrentIndex(IMAGE_NUM <= index ? 0 : index);
-  }, [currentImageIndex]);
+  };
 
   /**
    * Prevボタンが押されたとき
-   * @type {() => void}
    */
-  const onClickPrev = useCallback((): void => {
+  const onClickPrev = (): void => {
     clearTimer();
 
     const index: number = currentImageIndex - 1;
     updateCurrentIndex(index < 0 ? IMAGE_NUM - 1 : index);
-  }, [currentImageIndex]);
+  };
 
   /**
    * 自動更新ボタンが押されたとき
-   * @type {() => void}
    */
-  const onClickUpdate = useCallback(
-    () => {
-      window.clearTimeout(timerRef.current);
+  const onClickUpdate = (): void => {
+    window.clearTimeout(timerRef.current);
 
-      if (!isUpdate) {
-        timerRef.current = window.setTimeout(onUpdate, IMAGE_TIMER);
-      }
-      updateTimer(!isUpdate);
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [currentImageIndex, isUpdate]
-  );
+    if (!isUpdate) {
+      timerRef.current = window.setTimeout(onUpdate, IMAGE_TIMER);
+    }
+    updateTimer(!isUpdate);
+  };
 
   // useEffect ---------------------------
   useEffect(() => {
