@@ -1,14 +1,8 @@
 @use 'abstracts/index' as *;
 
-.container {
-  position: relative;
-}
-
-.body {
-  margin-top: 40px;
-
+.main {
   > .block + .block {
-    margin-top: 80px;
+    margin-top: 64px;
   }
 }
 

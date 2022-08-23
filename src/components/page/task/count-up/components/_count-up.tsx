@@ -94,33 +94,30 @@ const CountUp: FC = () => {
   }, []);
 
   return (
-    <Container isShowTopButton>
-      <section className={styles.container}>
-        <h1>カウントアップ</h1>
-        <div className={styles.main}>
-          <div className={styles.image}>
-            <img src={`${IMAGE_PATH}img_${currentImageIndex + 1}.jpg`} alt="" />
-          </div>
-          <ul className={styles.buttonList}>
-            <button className={styles.button} onClick={onClickPrev}>
-              PREV
-            </button>
-            <p>
-              {currentImageIndex + 1}/{IMAGE_NUM}
-            </p>
-            <button className={styles.button} onClick={onClickNext}>
-              NEXT
-            </button>
-          </ul>
-          <button
-            className={styles.button}
-            onClick={onClickUpdate}
-            data-is-active={isUpdate}
-          >
-            自動更新
-          </button>
+    <Container isShowTopButton title="カウントアップ">
+      <div className={styles.main}>
+        <div className={styles.image}>
+          <img src={`${IMAGE_PATH}img_${currentImageIndex + 1}.jpg`} alt="" />
         </div>
-      </section>
+        <ul className={styles.buttonList}>
+          <button className={styles.button} onClick={onClickPrev}>
+            PREV
+          </button>
+          <p>
+            {currentImageIndex + 1}/{IMAGE_NUM}
+          </p>
+          <button className={styles.button} onClick={onClickNext}>
+            NEXT
+          </button>
+        </ul>
+        <button
+          className={styles.button}
+          onClick={onClickUpdate}
+          data-is-active={isUpdate}
+        >
+          自動更新
+        </button>
+      </div>
     </Container>
   );
 };

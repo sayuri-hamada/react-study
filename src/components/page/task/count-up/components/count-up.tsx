@@ -12,23 +12,20 @@ const CountUp: FC = () => {
   console.log('自動更新の時間', IMAGE_TIMER);
 
   return (
-    <Container isShowTopButton>
-      <section className={styles.container}>
-        <h1>カウントアップ</h1>
-        <div className={styles.main}>
-          <div className={styles.image}>
-            <img src={`${IMAGE_PATH}img_1.jpg`} alt="" />
-          </div>
-          <ul className={styles.buttonList}>
-            <button className={styles.button}>PREV</button>
-            <p>1/{IMAGE_NUM}</p>
-            <button className={styles.button}>NEXT</button>
-          </ul>
-          <button className={styles.button} data-is-active={false}>
-            自動更新
-          </button>
+    <Container isShowTopButton title="カウントアップ">
+      <div className={styles.main}>
+        <div className={styles.image}>
+          <img src={`${IMAGE_PATH}img_1.jpg`} alt="" />
         </div>
-      </section>
+        <ul className={styles.buttonList}>
+          <button className={styles.button}>PREV</button>
+          <p>1/{IMAGE_NUM}</p>
+          <button className={styles.button}>NEXT</button>
+        </ul>
+        <button className={styles.button} data-is-active={false}>
+          自動更新
+        </button>
+      </div>
     </Container>
   );
 };

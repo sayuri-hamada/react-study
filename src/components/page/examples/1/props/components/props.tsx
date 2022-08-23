@@ -5,11 +5,8 @@ import { Button } from './button';
 
 const Props: FC = () => {
   return (
-    <Container isShowTopButton>
-      <section>
-        <h1>props</h1>
-        <Button color="red">ボタン</Button>
-      </section>
+    <Container isShowTopButton title="props">
+      <Button color="red">ボタン</Button>
     </Container>
   );
 };

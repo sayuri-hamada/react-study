@@ -1,13 +1,8 @@
 @use 'abstracts/index' as *;
 
-.container {
-  position: relative;
-}
-
 .main {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 40px;
   width: 640px;
 
   > .buttonList + button {
