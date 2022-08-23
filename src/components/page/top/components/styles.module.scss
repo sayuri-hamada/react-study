@@ -3,3 +3,25 @@
 .container {
   position: relative;
 }
+
+.body {
+  margin-top: 40px;
+
+  > .block + .block {
+    margin-top: 80px;
+  }
+}
+
+.block {
+  > ul {
+    margin-top: 16px;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+    @include hover {
+      text-decoration: navajowhite;
+    }
+  }
+}

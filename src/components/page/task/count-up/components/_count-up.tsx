@@ -8,7 +8,6 @@ import {
 } from 'react';
 
 import { IMAGE_PATH } from '../../../../../config';
-import { TopButton } from '../../../../elements';
 import { Container } from '../../../../layouts/container';
 
 import styles from './styles.module.scss';
@@ -95,9 +94,8 @@ const CountUp: FC = () => {
   }, []);
 
   return (
-    <Container>
+    <Container isShowTopButton>
       <section className={styles.container}>
-        <TopButton />
         <h1>カウントアップ</h1>
         <div className={styles.main}>
           <div className={styles.image}>
