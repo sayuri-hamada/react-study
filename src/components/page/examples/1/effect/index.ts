@@ -1,1 +1,1 @@
-export * from './components/ref-page';
+export * from './components/effect-page';

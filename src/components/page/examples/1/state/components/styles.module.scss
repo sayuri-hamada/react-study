@@ -3,28 +3,7 @@
 .button {
   border: 1px solid #000;
   border-radius: 20px;
+  margin-top: rem(24px);
   padding: 5px 20px;
   position: relative;
-
-  &[data-color='red'] {
-    border: 1px solid red;
-    color: red;
-  }
-
-  &[data-color='blue'] {
-    border: 1px solid blue;
-    color: blue;
-  }
-
-  &[data-color='orange'] {
-    border: 1px solid orange;
-    color: orange;
-  }
-
-  &[data-is-disable='true'] {
-    border: 1px solid #000;
-    color: #000;
-    opacity: 0.5;
-    pointer-events: none;
-  }
 }

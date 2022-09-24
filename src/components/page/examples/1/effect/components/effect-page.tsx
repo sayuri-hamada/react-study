@@ -3,7 +3,7 @@ import Head from 'next/head';
 
 import { Effect } from './effect';
 
-const RefPage: NextPage = () => {
+const EffectPage: NextPage = () => {
   return (
     <>
       <Head>
@@ -14,4 +14,4 @@ const RefPage: NextPage = () => {
   );
 };
 
-export { RefPage };
+export { EffectPage };
